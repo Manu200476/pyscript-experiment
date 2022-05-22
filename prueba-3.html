@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+        <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    </head>
+    <body> 
+        <h1>Prueba de Meter Contenido dentro de DIVs</h1>
+        <div>Fecha: <span id="fecha"></span></div>
+        <div>Fecha Formateada: <span id="fecha-formateada"></span></div>
+        <py-script>
+            import datetime
+
+            date = datetime.datetime.now()
+            pyscript.write('fecha', f'La fecha de hoy es: {date}')
+        </py-script>
+        <py-script output="fecha-formateada">
+            import datetime
+
+            date = datetime.datetime.now()
+            formated_date = date.strftime('%d/%m/%Y')
+            print(formated_date)
+        </py-script>
+    </body>
+</html>

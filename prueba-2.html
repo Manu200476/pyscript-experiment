@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+        <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+        <py-env>
+            - requests
+        </py-env>
+    </head>
+    <body> 
+        <h1>Cambiar la prueba</h1>
+        <py-script>
+            import requests
+
+            base_url = 'https://www.analyticslane.com/'
+
+            req = requests.get(base_url).text
+
+            print(req)
+        </py-script>
+    </body>
+</html>
